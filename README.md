@@ -53,17 +53,6 @@ touch .env
 GEMINI_API_KEY=your_actual_api_key_here
 ```
 
-3. Install python-dotenv:
-```bash
-pip install python-dotenv
-```
-
-4. Add this to the top of `app.py` (after imports):
-```python
-from dotenv import load_dotenv
-load_dotenv()
-```
-
 **Option B: Set environment variable directly**
 
 **On Windows (Command Prompt):**
