@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Feedback System</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📄 AI Resume Feedback System</h1>
+    
+    <div class="upload-section">
+      <h2>Upload Files for Analysis</h2>
+      
+      <div class="file-input-group">
+        <label for="resumeFile">📄 Resume:</label>
+        <div class="input-options">
+          <div class="option-tabs">
+            <button type="button" class="tab-btn active" onclick="switchResumeInput('file')">Upload File</button>
+            <button type="button" class="tab-btn" onclick="switchResumeInput('text')">Paste Text</button>
+          </div>
+          
+          <div id="resumeFileInput" class="input-content active">
+            <input type="file" id="resumeFile" accept=".pdf,.txt" />
+            <small>Upload PDF or TXT file</small>
+          </div>
+          
+          <div id="resumeTextInput" class="input-content">
+            <textarea id="resumeText" placeholder="Paste your resume text here...
+
+Example: 
+John Doe
+Software Engineer | john.doe@email.com | (555) 123-4567"></textarea>
+            <small>Paste resume text directly</small>
+          </div>
+        </div>
+      </div>
+      
+      <div class="file-input-group">
+        <label for="jobText">📋 Job Description:</label>
+        <textarea id="jobText" placeholder="Paste the job description here...
+
+Example: We are looking for a Software Engineer with experience in Python, JavaScript, React, Node.js, databases, and agile methodologies. The ideal candidate should have strong problem-solving skills, experience with cloud platforms, and excellent communication abilities."></textarea>
+        <small>Paste job description text directly</small>
+      </div>
+      
+      <button onclick="compareResumeToJob()" class="analyze-btn">
+        🔍 Compare & Analyze
+      </button>
+    </div>
+
+    <div id="resultsSection" class="results-section">
+      <div class="score-section">
+        <h2>🧠 Analysis Results</h2>
+        <p><strong>Match Score:</strong> <span id="matchScore">-</span>%</p>
+
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+
+        <p><strong>Missing Keywords:</strong> <span id="missingKeywords">-</span></p>
+      </div>
+
+      <div class="feedback-section">
+        <h3>📋 Detailed Feedback:</h3>
+        <pre id="feedback">Upload a resume and paste job description to get started...</pre>
+      </div>
+
+      <div class="download-section">
+        <button onclick="downloadPDF()" class="download-btn">
+          📥 Download Report as PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

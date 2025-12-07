@@ -1,0 +1,252 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #4a5568;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.upload-section {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 2px dashed #dee2e6;
+}
+
+.file-input-group {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.file-input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #495057;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 14px;
+}
+
+input[type="file"]:focus {
+  border-color: #007bfc;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 252, 0.1);
+}
+
+/* Input options styling for resume and job */
+.input-options {
+  margin-top: 10px;
+}
+
+.option-tabs {
+  display: flex;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 20px;
+  background: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-right: 1px solid #dee2e6;
+}
+
+.tab-btn:last-child {
+  border-right: none;
+}
+
+.tab-btn.active {
+  background: #007bfc;
+  color: white;
+}
+
+.tab-btn:not(.active):hover {
+  background: #e9ecef;
+}
+
+.input-content {
+  display: none;
+}
+
+.input-content.active {
+  display: block;
+}
+
+.input-content small {
+  display: block;
+  margin-top: 5px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.file-input-group small {
+  display: block;
+  margin-top: 5px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+#jobText, #resumeText {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+#jobText:focus, #resumeText:focus {
+  border-color: #007bfc;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 252, 0.1);
+}
+
+#resumeText {
+  min-height: 200px;  /* Larger for resume content */
+}
+
+.analyze-btn, .download-btn {
+  background: linear-gradient(45deg, #007bfc, #0056b3);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.analyze-btn:hover, .download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 252, 0.3);
+}
+
+.results-section {
+  margin-top: 30px;
+}
+
+.score-section {
+  background: #e3f2fd;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border-left: 5px solid #2196f3;
+}
+
+.score-section p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  max-width: 400px;
+  height: 30px;
+  background-color: #e9ecef;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 15px auto;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(45deg, #28a745, #20c997);
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-weight: bold;
+  transition: width 0.8s ease-in-out;
+  border-radius: 15px;
+  position: relative;
+}
+
+.feedback-section {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.feedback-section h3 {
+  margin-top: 0;
+  color: #495057;
+}
+
+pre {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.download-section {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  .upload-section {
+    padding: 20px;
+  }
+  
+  .progress-bar {
+    max-width: 100%;
+  }
+}
+
