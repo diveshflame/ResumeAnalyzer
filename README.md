@@ -45,6 +45,7 @@ pip install -r requirements.txt
 1. Create a `.env` file in the project root:
 ```bash
 # Create .env file
+You can create manually or
 touch .env
 ```
 
@@ -119,28 +120,6 @@ resume-feedback-system/
 Gemini Free Tier Limits:
 - **gemini-1.5-flash**: 15 requests per minute, 1,500 per day
 - This should be sufficient for personal use
-
-## Troubleshooting
-
-### "GEMINI_API_KEY not configured" Error
-- Make sure you've set the environment variable correctly
-- Restart your terminal/command prompt after setting the variable
-- Verify the API key is valid
-
-### "Failed to parse AI response" Error
-- This is rare but can happen with complex resumes
-- Try again - Gemini's responses can vary slightly
-- Ensure your resume and job description are not too long
-
-### PDF Not Reading Correctly
-- Make sure the PDF is not image-based (scanned document)
-- Try converting to text format first
-- Use the "Paste Text" option instead
-
-### Server Won't Start
-- Check if port 5000 is already in use
-- Try: `python app.py` or `python3 app.py`
-- Verify all dependencies are installed: `pip list`
 
 ## Features Explained
 
