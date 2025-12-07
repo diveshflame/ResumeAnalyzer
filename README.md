@@ -162,6 +162,18 @@ For issues or questions:
 
 This project is for personal use. Modify and distribute as needed.
 
+## Future enhancements :
+
+ATS-optimized resume rewrite
+
+Detailed dashboard with charts (skills match, keyword score)
+
+Cover letter generator
+
+Section-wise rewrite suggestions
+
+Save/download full analysis report as branded PDF
+
 ---
 
 Made with ❤️ using Google Gemini AI
